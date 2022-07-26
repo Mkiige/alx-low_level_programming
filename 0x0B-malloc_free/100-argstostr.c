@@ -1,38 +1,49 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * _strcat - Concat string, src appended to dest
+ * argstostr - function that concatenates all the arguments of your program
  *
- * @dest: Destination string
- * @src: Source string
- * Return: Concat newString to dest
+ * @ac: argument count
+ * @av: pointer to a string of pointers to strings
+ *
+ * Return: address of the newly allocated memory
  */
-char *_strcat(char *dest, char *src)
+
+char *argstostr(int ac, char **av)
 {
-        int a, b;
+	int i, j, k;
+	int sumlen = 0;
+	char *arg_concat;
 
-        for (a = 0; dest[a] != '\0'; a++)
-                ;
-        for (b = 0; src[b] != '\0'; b++)
-        {
-                dest[a] = src[b];
-                a++;
-        }
-        return (dest);
-}
+	if (ac == 0 || av == NULL)
+		return (NULL);
 
-/**
- * _strlen - Return the number of the length of the string
- *
- * @s: This is the string to check
- *
- * Return: Return the length of the string
- */
-int _strlen(char *s)
-{
-	int a;
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j] != '\0'; j++)
+			sumlen++;
+		sumlen++;
+	}
+	sumlen++;
 
-	for (a = 0; s[a] != '\0'; a++)
-		;
-	return (a);
+	arg_concat = malloc(sumlen * sizeof(char));
+	if (arg_concat == NULL)
+	{
+		free(arg_concat);
+		return (NULL);
+	}
+
+	k = 0;
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j] != '\0'; j++, k++)
+		{
+			arg_concat[k] = av[i][j];
+		}
+		arg_concat[k] = '\n';
+		k++;
+	}
+	return (arg_concat);
 }
