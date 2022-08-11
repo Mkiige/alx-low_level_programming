@@ -14,13 +14,12 @@ int _strlen(char *s)
 		str++;
 	}
 	return (str);
-}
 /**
- * add_node -  adds a new node at the beginning of a list_t list.
- * @head: pointer to the addres of head
- * @str: pointer to the string of each new node
- * Return: addres to the new head node
- */
+* add_node -  adds a new node at the beginning of a list_t list.
+* @head: pointer to the addres of head
+* @str: pointer to the string of each new node
+* Return: addres to the new head node
+*/
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new;
