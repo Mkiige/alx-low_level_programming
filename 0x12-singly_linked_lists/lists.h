@@ -1,24 +1,18 @@
 #ifndef LISTS_H
 #define LISTS_H
 
-/**
-* File: lists.h
-* Desc: Header file containing prototypes and definitions for all functions
-*       and types written in the 0x12-more_singly_linked_lists directory.
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 /**
-* struct list_s - singly linked list
-* @str: string - (malloc'ed string)
-* @len: length of the string
-* @next: points to the next node
-*
-* Description: singly linked list node structure
-*/
+ * struct list_s - singly linked list
+ * @str: string - (malloc'ed string)
+ * @len: length of the string
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
+ */
 typedef struct list_s
 {
 	char *str;
