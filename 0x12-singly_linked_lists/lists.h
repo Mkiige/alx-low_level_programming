@@ -1,16 +1,6 @@
 #ifndef LISTS_H
 #define LISTS_H
 
-<<<<<<< HEAD
-/**
- * 
- * File: lists.h
- * Desc: Header file containing prototypes and definitions for all function  
- * and types written in the 0x12-more_singly_linked_lists directory.
-
-
-=======
->>>>>>> 7ddc7d9f382cbe33deb8e0f64cf97dc1582e3df0
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
