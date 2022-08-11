@@ -1,4 +1,7 @@
 #include "lists.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 /**
 * _strlen - finding the lenght of a string.
 * @s: first pointer
