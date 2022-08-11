@@ -1,9 +1,9 @@
 #include "lists.h"
 /**
- * _strlen - finding the lenght of a string.
- * @s: first pointer
- * Return: it returns the length of the string.
- */
+* _strlen - finding the lenght of a string.
+* @s: first pointer
+* Return: it returns the length of the string.
+*/
 int _strlen(char *s)
 {
 	int str;
@@ -16,11 +16,11 @@ int _strlen(char *s)
 	return (str);
 }
 /**
- * add_node -  adds a new node at the beginning of a list_t list.
- * @head: pointer to the addres of head
- * @str: pointer to the string of each new node
- * Return: addres to the new head node
- */
+* add_node -  adds a new node at the beginning of a list_t list.
+* @head: pointer to the addres of head
+* @str: pointer to the string of each new node
+* Return: addres to the new head node
+*/
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new;
